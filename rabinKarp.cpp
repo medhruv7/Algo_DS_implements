@@ -20,7 +20,7 @@ vector<int> rabin_karp(string const& s,string const& t){
     vector<int> occurences;
     for(int i = 0;i + S - 1 < T; ++i){
         long long curr_h = (h[i + S] + m - h[i])%m;
-        if(curr_h == h_s){
+        if(curr_h == h_s*p_pow[i]%m){
             occurences.push_back(i);
         }
     }
