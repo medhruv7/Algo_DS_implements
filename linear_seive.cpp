@@ -22,7 +22,7 @@ void ls(){
 
 // getting the prime factorisation
 
-void getfc(int n){
+vector<int> getfc(int n){
 	vector<int> fact;
 	while(n != 1){
 		int x = lp[n];
@@ -31,4 +31,5 @@ void getfc(int n){
 			n /= x;
 		}
 	}
+	return fact;
 }
