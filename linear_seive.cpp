@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
 const int N = 10000000;
 int lp[N + 1];
 vector<int> pr;
@@ -15,3 +19,16 @@ void ls(){
 	}
 }
 
+
+// getting the prime factorisation
+
+void getfc(int n){
+	vector<int> fact;
+	while(n != 1){
+		int x = lp[n];
+		fact.push_back(x);
+		while(n%x == 0){
+			n /= x;
+		}
+	}
+}
