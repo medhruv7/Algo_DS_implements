@@ -19,6 +19,8 @@ void unite(int x,int y){
 }
 
 void init(int n){
+    par.resize(n);
+    sz.resize(n);
     for(int i = 0; i < n; ++i){
         par[i] = i;
         sz[i] = 1;
